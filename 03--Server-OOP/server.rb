@@ -9,7 +9,7 @@ end
 
 
 server.mount_proc "/shutdown" do |request, response|
-  response.body = "Jajatopata, Auf widersehen, Au revoir, Ciao, Hasta Pronto, Ate Logo, Goodbye, etc."
+  response.body = "Jajatopata, Auf widersehen, Au revoir, Ciao, Hasta Pronto, Ate Logo, Goodbye, See You, I wouldn't Want to be You!"
   server.shutdown
 end
 
