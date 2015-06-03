@@ -5,17 +5,17 @@ Rails.application.routes.draw do
 
   get 'todo/new'
 
-  get 'todos' => "todo#index"
+  get 'todos' => "todos#index"
 
-  get 'active' => "todo#active"
+  get 'active' => "todos#active"
 
-  get 'completed' => 'todo#completed'
+  get 'completed' => 'todos#completed'
 
-  post 'create' => 'todo#create'
+  post 'create' => 'todos#create'
 
-  post 'toggle_all' => 'todo#toggle_all'
+  post 'toggle_all' => 'todos#toggle_all'
 
-  post 'clear_completed/' => 'todo#clear_completed'
+  post 'clear_completed/' => 'todos#clear_completed'
 
   get 'todos/:id/edit' => 'todos#edit'
 
