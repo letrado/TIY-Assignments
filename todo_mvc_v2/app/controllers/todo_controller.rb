@@ -40,19 +40,37 @@ class TodoController < ApplicationController
   end
 
   def edit 
+    @todos = Todo.all
+    todo = @todos.find(params[:id])
+    todo.being_edited = true
+    render :index
   end
 
 
   def update
+    todo = @todos.find(params[:id])
+    hash = request.query
+    hash["name"].strip!
+    if hash["name"].length > 0
+      todo.update(hash)
+    else
+      todo.destroy
+    end
+    redeirect_to "/todo"
   end
 
 
   def toggle
-
+    todo = Todo.find(params[:id])
+    todo.toggle!(:complete)
+    redirect_to '/todo'
   end
 
 
   def destroy
+    todo = Todo.find(params[:id])
+    todo.destroy
+    redirect_to '/todo'
   end
 
 
