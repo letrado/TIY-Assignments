@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
-  get 'todo/index'
-
-  get 'todo/show'
-
-  get 'todo/new'
+  
 
   get 'todos' => "todos#index"
 

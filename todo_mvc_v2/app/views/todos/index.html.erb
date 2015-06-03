@@ -29,12 +29,12 @@
                 <!-- If this list item is being edited, the div.view can be omitted -->
                 <% unless todo.being_edited %>
                   <div class="view">
-                    <form method="POST" action="/todo/<%= todo.id %>/toggle">
+                    <form method="POST" action="/todos/<%= todo.id %>/toggle">
                       <input class="toggle" type="checkbox" 
                       <%= 'checked' if todo.complete? %>>
                     </form>
                     <a href="/todo/<%= todo.id %>/edit"><%= todo.name %></a>
-                    <form method="POST" action="/todo/<%= todo.id %>/destroy">
+                    <form method="POST" action="/todos/<%= todo.id %>/destroy">
                       <button class="destroy"></button>
                     </form>
                   </div>

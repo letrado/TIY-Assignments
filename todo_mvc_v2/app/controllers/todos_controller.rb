@@ -35,12 +35,12 @@ class TodosController < ApplicationController
 
   def toggle_all
   	Todo.toggle_all
-    redeirect_to "/todo"
+    redirect_to "/todos"
   end
 
   def clear_completed
   	Todo.clear_completed
-    redeirect_to "/todo"
+    redirect_to "/todos"
   end
 
   def edit 
@@ -60,21 +60,21 @@ class TodosController < ApplicationController
     else
       todo.destroy
     end
-    redeirect_to "/todo"
+    redirect_to "/todos"
   end
 
 
   def toggle
     todo = Todo.find(params[:id])
     todo.toggle!(:complete)
-    redirect_to '/todo'
+    redirect_to '/todos'
   end
 
 
   def destroy
     todo = Todo.find(params[:id])
     todo.destroy
-    redirect_to '/todo'
+    redirect_to '/todos'
   end
 
 
