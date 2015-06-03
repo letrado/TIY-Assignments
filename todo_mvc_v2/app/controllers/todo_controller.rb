@@ -12,7 +12,7 @@ class TodoController < ApplicationController
     @flag = 'active'
   end
 
-  def competed
+  def completed
 	 @todos = Todo.where(complete: true)
 	 @all_todos_count = Todo.count
 	 @flag = 'completed'

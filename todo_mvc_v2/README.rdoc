@@ -7,7 +7,7 @@ To translate the Todo class and the database into rails
 	*  in the above command you give the name to the class "Todo" and setup tables with the column heading and the data type
 	*  The above represents the creation of the Todo class
 
-	*  next rake.db and rake.migrate create the database and migrate it.
+	*  next rake db:create and rake db:migrate create the database and migrate it.
 	*  to test this you need to run the rails console by typing:
 		*  rails console
 		*  this will bring up the rils version of IRB
@@ -17,7 +17,23 @@ To translate the Todo class and the database into rails
 		*  Todo.create (with this command you put in the arguments to see if this populates your data base)
 		*  do this like:
 			*  Todo.create(name: "garbage", complete: true)
-			
+
+	*  To translate the template and controller to Rails 
+		*  rails generate controller Todo show new all
+		*  this will generate a new controller called todo_controller.rb
+			* This controller has three empty methods, "index", "show" and "new"
+			* For this project we do not need those shell methods.
+			* Instead we define new methods that match the blocks we had in our the file of our non-rails
+			  Todo List App
+			* The code we use in defining these new methods, is the Ruby code we used in the blocks of
+			  our non-Ruby Todo List controller.
+	*  Translating the routes
+		*  Take all of the routes from the controller file from the non rails project.
+		*  Put it in the new routes.rb file and then translate it for rails 
+		*  Example:      get 'todos/' => "todo#index"
+		*  Example:      get 'active/' => "todo#active"
+		*  Example:      get 'completed/' => 'todo#completed'
+
 
 
 
