@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   get 'completed' => 'todo#completed'
 
-  post 'create_todo' => 'todo#create_todo'
+  post 'create' => 'todo#create'
 
   post 'toggle_all' => 'todo#toggle_all'
 
