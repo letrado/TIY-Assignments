@@ -1,18 +1,17 @@
 Rails.application.routes.draw do
-  get 'people/index' => 'people#index'
+  get 'people' => 'people#index'
 
-  get 'people/show' => 'people#show'
+  get 'people/new', as: :new_person
 
-  get 'people/new' => 'people#new'
+  get 'people/:id' => 'people#show', as: :person
 
-  get 'people/create' => 'people#create'
+  get 'people/:id/edit' => 'people#edit', as: :edit_person
 
-  get 'people/update' => 'people#update'
+  post 'people' => 'people#create'
 
-  get 'people/edit' => 'people#edit'
+  patch 'people/:id' => 'people#update'
 
-  get 'people/destroy' => 'people#destroy'
-
+  post 'people/:id/destroy' => 'people#destroy'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -68,3 +67,4 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 end
+

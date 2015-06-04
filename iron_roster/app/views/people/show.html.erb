@@ -1,2 +1,7 @@
-<h1>People#show</h1>
-<p>Find me in app/views/people/show.html.erb</p>
+<h1><%= @person.name %></h1>
+<p>Visit me on GitHub at 
+  <%= link_to @person.github_account,
+  "https://github.com/#{@person.github_account}" %></p>
+<%= link_to 'edit', edit_person_path(@person) %>
+<%= link_to 'Back to list', people_path %>
+

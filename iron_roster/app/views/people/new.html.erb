@@ -1,2 +1,31 @@
-<h1>People#new</h1>
-<p>Find me in app/views/people/new.html.erb</p>
+
+<%= form_for @person do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :subject %>
+<%= f.text_field :subject %>
+<%= f.label :github_account, 'Github Account' %>
+<%= f.text_field :github_account %>
+<%= f.submit 'Edit my data' %>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+<!-- <h1>Add a Person</h1>
+<form method="POST" action="<%= people_path %>">
+  <label for="person_name">Name</label>
+  <input type="text" id="person_name" name="person[name]">
+  <label for="person_subject">Subject</label>
+  <input type="text" id="person_subject" name="person[subject]">
+  <label for="person_github_account">Github</label>
+  <input type="text" id="person_github_account" name="person[github_account]">
+  
+  <button>Make your person</button>
+</form> -->
