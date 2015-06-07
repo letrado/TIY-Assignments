@@ -1,0 +1,12 @@
+<h1>PICK A BLOG, ANY BLOG</h1><br>
+<p>
+<a href="http://localhost:3000/posts/new">Add Your Own Blog Entry</a>
+</p>
+<ul>
+  <% @posts.each do |blog| %>
+    <li><%= link_to blog.title, post_path(blog) %></li><br>
+    <p><%= blog.author %></p>
+    <p><%= blog.content %></p>
+
+  <% end %>
+</ul>
