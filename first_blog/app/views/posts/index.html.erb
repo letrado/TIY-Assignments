@@ -2,11 +2,13 @@
 <p>
 <a href="http://localhost:3000/posts/new">Add Your Own Blog Entry</a>
 </p>
+<div class="post-wrapper">
 <ul>
   <% @posts.each do |blog| %>
     <li><%= link_to blog.title, post_path(blog) %></li><br>
-    <p><%= blog.author %></p>
+    <p>Author:  <%= blog.author %></p>
     <p><%= blog.content %></p>
 
   <% end %>
 </ul>
+</div>
