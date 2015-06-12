@@ -1,0 +1,19 @@
+<h1>Create a new Post</h1>
+
+		<%= form_for @post do |f| %>
+	<p>
+		<%= f.label :title %>
+		<%= f.text_field :title %><br>
+		
+	</p>
+	<p>
+		<%= f.label :author %>	
+		<%= f.text_field :author %>	
+	</p>
+
+	<p>
+		<%= f.label :content %>
+		<%= f.text_area :content, :size => "70 x 20" %><br>	
+	</p>
+	<%= f.submit 'Update blog post' %>
+<% end %>

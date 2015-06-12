@@ -1,0 +1,8 @@
+<h1>People</h1>
+<p>Here are all the people in my db:</p>
+<ul>
+  <% @persons.each do |bro| %>
+    <li><%= link_to bro.name, person_path(bro) %></li>
+  <% end %>
+</ul>
+<%= link_to 'Add a new person', new_person_path %>
